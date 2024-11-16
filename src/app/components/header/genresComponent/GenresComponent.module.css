@@ -1,0 +1,40 @@
+.genres {
+    position: relative;
+}
+
+.genres__btn {
+    font-size: 24px;
+}
+
+.genres__list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    top: -1500%;
+    left: 0;
+    max-height: 290px;
+    overflow-y: auto;
+    transition: .4s;
+    background-color: #001312;
+    padding: 25px 15px;
+}
+
+.genres__list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.genres__list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.genres__list::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #1b6d7d;
+    border-radius: 4px;
+}
+
+.genres__list-active {
+    top: 40px;
+    transition: .4s;
+}

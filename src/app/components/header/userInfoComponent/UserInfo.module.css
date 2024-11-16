@@ -1,0 +1,13 @@
+.user {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.user__image {
+    border-radius: 50%;
+}
+
+.user > div {
+    font-size: 23px;
+}

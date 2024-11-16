@@ -1,0 +1,28 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 18px 0;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+.header__inner > div:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.logo span {
+    font-size: 28px;
+}
