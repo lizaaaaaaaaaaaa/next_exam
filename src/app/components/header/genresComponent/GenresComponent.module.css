@@ -16,7 +16,7 @@
     max-height: 290px;
     overflow-y: auto;
     transition: .4s;
-    background-color: #001312;
+    background-color:#ca7900;
     padding: 25px 15px;
 }
 
@@ -30,7 +30,7 @@
 
 .genres__list::-webkit-scrollbar-thumb {
     width: 4px;
-    background-color: #1b6d7d;
+    background-color: #fff;
     border-radius: 4px;
 }
 

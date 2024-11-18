@@ -1,12 +1,26 @@
 .intro {
-    background-image: url("../../../assets/images/intro/background.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    position: relative;
 }
 
-.intro__inner {
-    padding-top: 100px;
+.intro:after {
+    content: url("../../../assets/images/intro/back.svg");
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.intro__main {
+    padding-top: 190px;
+}
+
+.intro__img {
+    position: absolute;
+    pointer-events: none;
+    top: 27px;
+    right: 0;
 }

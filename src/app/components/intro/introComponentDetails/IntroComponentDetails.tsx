@@ -1,21 +1,20 @@
 import React from 'react';
+import styles from "./IntroComponentDetails.module.css";
+import StarsRating from "@/app/components/starsRatingComponent/StarsRating";
 
 type PropsType = {
     title: string,
     vote_average: number,
-    vote_count: number,
-    tagline: string,
     overview: string
 }
 
-const IntroComponentDetails: React.FC<PropsType> = ({title, vote_average, vote_count, tagline, overview}) => {
+const IntroComponentDetails: React.FC<PropsType> = ({title, vote_average, overview}) => {
     return (
-        <div>
+        <div className={styles.intro__content}>
             <h2>{title}</h2>
-            <div>{vote_average}</div>
-            <div>{vote_count}</div>
-            <blockquote>{tagline}</blockquote>
-            <p>{overview}</p>
+            <StarsRating rating={vote_average} starDimension={"40px"} starSpacing={"2px"}/>
+            <p className={styles.intro__text}>{overview}</p>
+            {/*todo*/}
             <button>See more!</button>
         </div>
     );

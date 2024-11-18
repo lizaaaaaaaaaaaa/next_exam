@@ -1,23 +1,22 @@
 import React from 'react';
 import Link from "next/link";
-import GenresComponent from "@/app/components/header/genresComponent/GenresComponent";
 import styles from "./Header.module.css";
 import UserInfo from "@/app/components/header/userInfoComponent/UserInfo";
+import logo from "../../assets/images/svg/logo.svg";
+import Image from "next/image";
+import NavComponent from "@/app/components/header/navComponent/NavComponent";
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <header className={styles.header}>
             <div className={`container ${styles.header__inner}`}>
                 <div>
                     <Link href={"/"} className={styles.logo}>
-                        <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 3L20 16L2 29V3Z" stroke="#1B6D7D" strokeWidth="3"/>
-                            <path d="M8 3L26 16L8 29V3Z" stroke="#1B6D7D" strokeWidth="3"/>
-                        </svg>
-                        <span>FilmSpace</span>
+                        <Image src={logo} alt={"Movie Eye"} width={215} height={48}/>
                     </Link>
-                    <GenresComponent/>
+
                 </div>
+                <NavComponent/>
                 <UserInfo/>
             </div>
         </header>

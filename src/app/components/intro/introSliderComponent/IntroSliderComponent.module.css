@@ -1,0 +1,10 @@
+.intro__slider {
+    overflow: hidden;
+    padding-top: 65px;
+    padding-bottom: 47px;
+}
+
+.intro__slider > div > div {
+    display: flex;
+    gap: 0 25px;
+}

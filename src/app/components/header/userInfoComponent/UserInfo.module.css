@@ -5,9 +5,11 @@
 }
 
 .user__image {
-    border-radius: 50%;
+    border-radius: 10px;
+    border: 3px solid #ca7900;
 }
 
 .user > div {
     font-size: 23px;
+    color: #ca7900;
 }

@@ -1,0 +1,19 @@
+.intro__content {
+    max-width: 570px;
+}
+
+.intro__content h2 {
+    font-size: 68px;
+    font-weight: 600;
+    max-width: 565px;
+}
+
+.intro__votes {
+    padding: 15px 0 0;
+    font-size: 30px;
+}
+
+.intro__text {
+    padding: 20px 0;
+    line-height: 1.19;
+}

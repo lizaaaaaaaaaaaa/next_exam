@@ -47,9 +47,23 @@ const getAllGenres = async (): Promise<IGenre[]> => {
     return values.genres;
 }
 
+const getPopularMovies = async (): Promise<IRegularMovie[]> => {
+    const response: Response = await fetch(baseUrl + "/movie/popular?language=en-US", {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${authToken}`,
+            "Content-Type": "application/json",
+        }
+    })
+
+    const values = await response.json();
+    return values.results;
+}
+
 
 export {
     getMoviesByPage,
     getSingleMovieById,
-    getAllGenres
+    getAllGenres,
+    getPopularMovies
 }
