@@ -1,0 +1,24 @@
+.pagination > ul {
+    padding: 32px 0;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.pagination > ul > li > button,
+.pagination > ul > li > div {
+    box-sizing: content-box;
+    font-size: 16px;
+    padding: 8px;
+    color: #ca7900;
+    background-color: transparent;
+    border: 1px solid #ca7900;
+    border-radius: 4px;
+    min-height: 23px;
+    height: auto;
+    transition: .2s;
+}
+
+.pagination > ul > li > button:hover {
+    opacity: .6;
+    transition: .4s;
+}

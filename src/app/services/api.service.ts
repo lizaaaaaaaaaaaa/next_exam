@@ -3,14 +3,7 @@ import IRegularMovie from "@/app/models/IRegularMovie";
 import IDetailedMovie from "@/app/models/IDetailedMovie";
 import IGenre from "@/app/models/IGenre";
 
-interface IMovieResponse {
-    page: number,
-    results: IRegularMovie[],
-    total_pages: number,
-    total_results: number,
-}
-
-const getMoviesByPage = async (page: string): Promise<IMovieResponse> => {
+const getMoviesByPage = async (page: string): Promise<IRegularMovie[]> => {
     const response: Response = await fetch(baseUrl + `/discover/movie?page=${page}`, {
         method: "GET",
         headers: {
@@ -18,7 +11,9 @@ const getMoviesByPage = async (page: string): Promise<IMovieResponse> => {
             "Content-Type": "application/json",
         }
     });
-    return response.json();
+
+    const values = await response.json();
+    return values.results;
 }
 
 const getSingleMovieById = async (id: string): Promise<IDetailedMovie> => {

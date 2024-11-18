@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import UserInfo from "@/app/components/header/userInfoComponent/UserInfo";
 import logo from "../../assets/images/svg/logo.svg";
 import Image from "next/image";
-import NavComponent from "@/app/components/header/navComponent/NavComponent";
+import NavComponent from "@/app/components/catalog/navComponent/NavComponent";
 
 const Header: React.FC = () => {
     return (

@@ -1,4 +1,4 @@
-const cutText = (text:string, maxLength:number):string => {
+const cutText = (text: string, maxLength: number): string => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
 
