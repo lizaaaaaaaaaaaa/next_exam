@@ -2,7 +2,7 @@
 
 import React, {FC, useEffect, useState} from 'react';
 import {useSearchParams} from "next/navigation";
-import {getMoviesByPage} from "@/app/services/api.service";
+import {getMoviesByPage, getWantedFilms} from "@/app/services/api.service";
 import IRegularMovie from "@/app/models/IRegularMovie";
 import styles from "./MovieList.module.css";
 import MoviesListCard from "@/app/components/catalog/moviesListCard/MoviesListCard";
@@ -16,9 +16,11 @@ const MoviesList: FC = () => {
     useEffect((): void => {
         getMoviesByPage(page).then(values => setMovies(values));
     }, [page]);
+
     return (
         <ul className={styles.catalog__list}>
-            {movies.map((movie: IRegularMovie, index: number) => <MoviesListCard key={index} title={movie.title}
+            {movies.map((movie: IRegularMovie, index: number) => <MoviesListCard key={index} id={movie.id}
+                                                                                 title={movie.title}
                                                                                  poster_path={movie.poster_path}
                                                                                  vote_average={movie.vote_average}/>)}
         </ul>

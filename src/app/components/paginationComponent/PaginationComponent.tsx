@@ -7,9 +7,9 @@ import styles from "./PaginationComponent.module.css";
 
 const PaginationComponent: FC = () => {
     const router = useRouter();
-    const [page, setPage] = useState<number>(1)
+    const [page, setPage] = useState<number>(1);
 
-    const pageChangeHandler = (event: React.ChangeEvent<unknown>, page: number): any => {
+    const pageChangeHandler = (event: React.ChangeEvent<unknown>, page: number): void => {
         setPage(page);
         router.push(`?page=${page}`, {scroll: false});
     }

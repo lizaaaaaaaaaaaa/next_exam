@@ -38,3 +38,7 @@
     top: 40px;
     transition: .4s;
 }
+
+.genres__list a:hover {
+    text-decoration: underline;
+}

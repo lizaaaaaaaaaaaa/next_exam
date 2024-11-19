@@ -49,6 +49,19 @@ const getPopularMovies = async (): Promise<IRegularMovie[]> => {
             "Authorization": `Bearer ${authToken}`,
             "Content-Type": "application/json",
         }
+    });
+
+    const values = await response.json();
+    return values.results;
+}
+
+const getWantedFilms = async (text: string, page: string):Promise<IRegularMovie[]> => {
+    const response: Response = await fetch(baseUrl + `/search/movie?query=${text}&include_adult=true&language=en-US&page=${page}`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${authToken}`,
+            "Content-Type": "application/json",
+        }
     })
 
     const values = await response.json();
@@ -60,5 +73,6 @@ export {
     getMoviesByPage,
     getSingleMovieById,
     getAllGenres,
-    getPopularMovies
+    getPopularMovies,
+    getWantedFilms
 }

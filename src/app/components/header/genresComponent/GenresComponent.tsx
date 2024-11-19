@@ -22,7 +22,7 @@ const GenresComponent: FC = () => {
         <div className={styles.genres}>
             <button onClick={clickGenresButtonHandler} className={styles.genres__btn}>Genres</button>
             <ul className={`${styles.genres__list} ${isGenresActive ? styles["genres__list-active"] : ""}`}>
-                {genres.map(genre => <GenresItemComponent key={genre.id} name={genre.name}/>)}
+                {genres.map(genre => <GenresItemComponent key={genre.id} id={genre.id} name={genre.name}/>)}
             </ul>
         </div>
     );

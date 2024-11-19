@@ -1,0 +1,14 @@
+.movie {
+    padding-top: 190px;
+}
+
+.movie__inner {
+    display: flex;
+    gap: 0 50px;
+}
+
+.movie__poster {
+    height: 615px;
+    display: block;
+    border-radius: 10px;
+}
