@@ -1,0 +1,17 @@
+.movie__countries {
+    display: inline;
+}
+
+.movie__countries > li {
+    display: inline-flex;
+}
+
+.movie__countries > li:after {
+    content: ", ";
+    padding-right: 10px;
+}
+
+.movie__countries > li:last-child:after {
+    content: none;
+    padding-right: 0;
+}

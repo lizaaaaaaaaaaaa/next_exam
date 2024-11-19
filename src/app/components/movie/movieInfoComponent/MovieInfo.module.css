@@ -1,0 +1,65 @@
+.movie__info {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__info h1 {
+    font-size: 48px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.movie__info h2 {
+    font-size: 32px;
+    font-weight: 500;
+    display: inline;
+}
+
+.movie__info > div {
+    display: inline;
+    padding-top: 15px;
+}
+
+.movie__info > div:first-of-type {
+    padding-top: 0;
+}
+
+.movie__info > div > b {
+    min-width: fit-content;
+    padding-right: 15px;
+}
+
+.movie__info blockquote {
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.movie__info blockquote:before {
+    content: url("../../../assets/images/svg/quotes-start.svg");
+    position: relative;
+    top: -17px;
+    padding-right: 10px;
+}
+
+.movie__info blockquote:after {
+    content: url("../../../assets/images/svg/quotes-end.svg");
+    position: relative;
+    top: -17px;
+    padding-left: 10px;
+}
+
+.movie__rate {
+    display: flex !important;
+    gap: 0 20px;
+    align-items: center;
+}
+
+.movie__rate > span {
+    font-size: 25px;
+    color: #ca7900;
+}
+
+.movie__info > p {
+    padding-top: 25px;
+}

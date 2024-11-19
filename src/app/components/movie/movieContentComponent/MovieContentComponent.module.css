@@ -1,5 +1,6 @@
 .movie {
     padding-top: 190px;
+    padding-bottom: 90px;
 }
 
 .movie__inner {
@@ -8,7 +9,10 @@
 }
 
 .movie__poster {
-    height: 615px;
+    min-width: 525px;
+    height: 725px;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border-radius: 10px;
 }

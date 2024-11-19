@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import MovieContentComponent from "@/app/components/movie/MovieContentComponent";
+import MovieContentComponent from "@/app/components/movie/movieContentComponent/MovieContentComponent";
 
 const MoviePage = ({params}: { params: { id: string } }) => {
 

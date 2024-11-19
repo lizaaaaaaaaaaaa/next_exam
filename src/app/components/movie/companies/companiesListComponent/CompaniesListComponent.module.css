@@ -1,0 +1,21 @@
+.movie__companies {
+    display: inline;
+}
+
+.movie__companies > li {
+    display: inline-flex;
+}
+
+.movie__countries > li > h6 {
+    display: inline;
+}
+
+.movie__companies > li:after {
+    content: ",";
+    padding-right: 10px;
+}
+
+.movie__companies > li:last-child:after {
+    content: none;
+    padding-right: 0;
+}

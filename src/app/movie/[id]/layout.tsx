@@ -1,5 +1,4 @@
 import type {Metadata} from "next";
-import Header from "@/app/components/header/Header";
 import {getSingleMovieById} from "@/app/services/api.service";
 
 export const generateMetadata = async ({params}: { params: { id: string } }): Promise<Metadata> => {
@@ -10,12 +9,5 @@ export const generateMetadata = async ({params}: { params: { id: string } }): Pr
     }
 }
 export default function MoviesLayout({children,}: Readonly<{ children: React.ReactNode }>) {
-    return (
-        <html lang="en">
-        <body>
-        <Header/>
-        {children}
-        </body>
-        </html>
-    );
+    return <div>{children}</div>;
 }
