@@ -10,19 +10,21 @@ import ISliderSettings from "@/app/models/ISliderSettings";
 const Slider = dynamic(() => import('react-slick'), {ssr: false});
 
 const IntroSliderComponent: FC<{ movies: IRegularMovie[] }> = ({movies}) => {
-    const settings:ISliderSettings = {
-        infinite: false,
-        arrows: false,
+    const settings: ISliderSettings = {
+        infinite: true,
+        arrows: true,
         dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        swipe: true
+        variableWidth: false,
+        swipe: false
     };
 
     return (
         <Slider {...settings} className={styles.intro__slider}>
             {movies.map(movie => (
-                <IntroSliderItemComponent key={movie.id} title={movie.title} vote_average={movie.vote_average}
+                <IntroSliderItemComponent key={movie.id} id={movie.id} title={movie.title}
+                                          vote_average={movie.vote_average}
                                           overview={movie.overview} poster_path={movie.poster_path}>
                 </IntroSliderItemComponent>
             ))}

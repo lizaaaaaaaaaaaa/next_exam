@@ -1,10 +1,54 @@
 .intro__slider {
     overflow: hidden;
-    padding-top: 65px;
-    padding-bottom: 47px;
+    position: relative;
+    margin: 65px 0 45px;
+}
+
+.intro__slider > div {
+    margin: 0 -10px;
 }
 
 .intro__slider > div > div {
     display: flex;
-    gap: 0 25px;
+}
+
+.intro__slider > div > div > div {
+    padding: 0 10px;
+}
+
+.intro__slider > button {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro__slider > button:first-of-type {
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.intro__slider > button:last-of-type {
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.intro__slider > button:after {
+    font-size: 50px;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.intro__slider > button:first-of-type:after {
+    content: "\276E";
+}
+
+.intro__slider > button:last-of-type:after {
+    content: "\276F";
 }

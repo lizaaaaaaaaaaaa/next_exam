@@ -3,6 +3,13 @@ import IRegularMovie from "@/app/models/IRegularMovie";
 import IDetailedMovie from "@/app/models/IDetailedMovie";
 import IGenre from "@/app/models/IGenre";
 
+interface IResponse {
+    page: number,
+    results: IRegularMovie[],
+    total_pages: number,
+    total_results: number
+}
+
 const getMoviesByPage = async (page: string): Promise<IRegularMovie[]> => {
     const response: Response = await fetch(baseUrl + `/discover/movie?page=${page}`, {
         method: "GET",
@@ -55,7 +62,7 @@ const getPopularMovies = async (): Promise<IRegularMovie[]> => {
     return values.results;
 }
 
-const getWantedFilms = async (text: string, page: string): Promise<IRegularMovie[]> => {
+const getWantedFilms = async (text: string, page: string): Promise<IResponse> => {
     const response: Response = await fetch(baseUrl + `/search/movie?query=${text}&include_adult=true&language=en-US&page=${page}`, {
         method: "GET",
         headers: {
@@ -63,13 +70,11 @@ const getWantedFilms = async (text: string, page: string): Promise<IRegularMovie
             "Content-Type": "application/json",
         }
     })
-
-    const values = await response.json();
-    return values.results;
+    return await response.json();
 }
 
 const getFilmsByGenre = async (genreId: string, page: string): Promise<IRegularMovie[]> => {
-    const response: Response = await fetch(baseUrl + `/discover/movie?include_adult=true&include_video=true&language=en-US&page=${page ? page : "1"}&sort_by=primary_release_date.desc&with_genres=${genreId}`, {
+    const response: Response = await fetch(baseUrl + `/discover/movie?include_adult=true&include_video=true&language=en-US&page=${page ? page : "1"}&sort_by=primary_release_date.asc&with_genres=${genreId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`,

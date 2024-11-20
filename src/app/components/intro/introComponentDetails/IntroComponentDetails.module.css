@@ -17,3 +17,18 @@
     padding: 20px 0;
     line-height: 1.19;
 }
+
+.intro__link {
+    font-size: 25px;
+    padding: 12px 36px;
+    background-color: #ca7900;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: inline-block;
+    transition: .2s;
+}
+
+.intro__link:hover {
+    transform: scale(1.05);
+    transition: .4s;
+}

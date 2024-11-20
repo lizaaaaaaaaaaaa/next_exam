@@ -4,7 +4,6 @@ import CountriesItemComponent from "@/app/components/movie/countries/countriesIt
 import styles from "./CountriesListComponent.module.css";
 
 const CountriesListComponent: FC<{ countries: IProductionCountries[] }> = ({countries}) => {
-    console.log(countries);
 
     return (
         <ul className={styles.movie__countries}>

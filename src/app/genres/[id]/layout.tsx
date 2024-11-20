@@ -1,15 +1,17 @@
 import type {Metadata} from "next";
 import {ParamsType} from "@/app/models/ParamsType";
-import {getSingleMovieById} from "@/app/services/api.service";
+import {getAllGenres} from "@/app/services/api.service";
+import IGenre from "@/app/models/IGenre";
 
 export const generateMetadata = async ({params}: { params: ParamsType }): Promise<Metadata> => {
     const {id} = await params;
-    const {title, overview} = await getSingleMovieById(id);
+    const genres: IGenre[] = await getAllGenres();
+    const searchGenre: IGenre | undefined = genres.find(genre => id === genre.id.toString())
     return {
-        title: `${title ? title : "MovieEye"}`,
-        description: `${overview ? overview : "Find your movie with us!"}`,
+        title: searchGenre ? `${searchGenre.name} films` : "MovieEye"
     };
 };
+
 
 export default function MoviesLayout({children,}: Readonly<{ children: React.ReactNode }>) {
     return <div>{children}</div>;

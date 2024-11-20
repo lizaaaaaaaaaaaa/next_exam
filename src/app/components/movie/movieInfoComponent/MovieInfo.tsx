@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import IGenre from "@/app/models/IGenre";
 import IProductionCompanies from "@/app/models/IProductionCompanies";
 import IProductionCountries from "@/app/models/IProductionCountries";
-import GenresListComponent from "@/app/components/movie/genres/genresListComponent/GenresListComponent";
+import GenreBadges from "@/app/components/movie/genres/genreBadges/GenreBadges";
 import StarsRating from "@/app/components/starsRatingComponent/StarsRating";
 import CompaniesListComponent from "@/app/components/movie/companies/companiesListComponent/CompaniesListComponent";
 import CountriesListComponent from "@/app/components/movie/countries/countriesListComponent/CountriesListComponent";
@@ -50,7 +50,7 @@ const MovieInfo: FC<PropsType> = ({
                 <b>Tagline:</b>
                 <blockquote>{tagline}</blockquote>
             </div> : ""}
-            <GenresListComponent genres={genres}/>
+            <GenreBadges genres={genres}/>
             <div className={styles.movie__rate}>
                 <StarsRating rating={vote_average} starDimension={"40px"} starSpacing={"2px"}/>
                 <span>{vote_count}</span>
@@ -59,8 +59,10 @@ const MovieInfo: FC<PropsType> = ({
             <div><b>Film budget:</b>{budget > 0 ? `${budget}$` : "unknown"}</div>
             <div><b>Box Office:</b>{revenue > 0 ? `${revenue}$` : "unknown"}</div>
             <div><b>Playtime:</b><span>{runtime} minutes</span></div>
-            <div><b>Production companies:</b><CompaniesListComponent companies={production_companies}/></div>
-            <div><b>Production countries:</b><CountriesListComponent countries={production_countries}/></div>
+            <div><b>Production companies:</b>{production_companies.length > 0 ?
+                <CompaniesListComponent companies={production_companies}/> : "unknown"}</div>
+            <div><b>Production countries:</b>{production_countries.length > 0 ?
+                <CountriesListComponent countries={production_countries}/> : "unknown"}</div>
             <p>{overview}</p>
         </div>
     );

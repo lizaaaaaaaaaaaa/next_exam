@@ -1,0 +1,13 @@
+.movies {
+    padding-top: 130px;
+}
+
+.movies__title {
+    font-size: 52px;
+    font-weight: 700;
+    padding-bottom: 45px;
+}
+
+.movies__title span {
+    color: #ca7900;
+}

@@ -13,7 +13,8 @@ const IntroComponent: React.FC = async () => {
     return (
         <section className={styles.intro}>
             <div className={`container ${styles.intro__main}`}>
-                <IntroComponentDetails title={introMovie.title} vote_average={introMovie.vote_average}
+                <IntroComponentDetails id={introMovie.id} title={introMovie.title}
+                                       vote_average={introMovie.vote_average}
                                        overview={introMovie.overview}/>
                 <Image src={hero} alt={introMovie.title} priority={true} width={877} height={723}
                        className={styles.intro__img}/>

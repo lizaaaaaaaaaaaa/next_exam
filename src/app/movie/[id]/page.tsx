@@ -1,20 +1,11 @@
 import React from 'react';
 import MovieContentComponent from "@/app/components/movie/movieContentComponent/MovieContentComponent";
-import type {Metadata} from "next";
-import {getSingleMovieById} from "@/app/services/api.service";
+import {ParamsType} from "@/app/models/ParamsType";
 
-export const generateMetadata = async ({params}: { params: { id: string } }): Promise<Metadata> => {
-    const id = await params.id;
-    const {title, overview} = await getSingleMovieById(id);
-    return {
-        title: `${title}`,
-        description: `${overview}`
-    }
-}
-
-const MoviePage = async ({params}: { params: { id: string } }) => {
-    const id: string = await params.id;
+const MoviePage = async ({params}: { params: ParamsType }) => {
+    const {id} = await params;
     return <MovieContentComponent id={id}/>;
 };
+
 
 export default MoviePage;

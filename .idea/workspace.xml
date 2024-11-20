@@ -4,12 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eb334b6-5299-40a2-bad7-f91f78634465" name="Changes" comment="finished movie details page">
-      <change afterPath="$PROJECT_DIR$/src/app/components/byGenre/moviesByGenreContentComponent/MoviesByGenreContentComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/genres/[id]/page.tsx" afterDir="false" />
+    <list default="true" id="6eb334b6-5299-40a2-bad7-f91f78634465" name="Changes" comment="update movie details page">
+      <change afterPath="$PROJECT_DIR$/src/app/components/byGenre/moviesByGenreContentComponent/MoviesByGenreContentComponent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/catalog/searchFormComponent/SearchFormComponent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/catalog/searchFormComponent/SearchFormComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/movie/genres/genreBadges/GenreBadges.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/genres/[id]/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/models/ParamsType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/byGenre/moviesByGenreContentComponent/MoviesByGenreContentComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/byGenre/moviesByGenreContentComponent/MoviesByGenreContentComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/catalog/catalogComponent/CatalogComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/catalogComponent/CatalogComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introSliderItem/IntroSliderItemComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introSliderItem/IntroSliderItemComponent.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introSliderItem/IntroSliderItemComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introSliderItem/IntroSliderItemComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/countries/countriesListComponent/CountriesListComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/countries/countriesListComponent/CountriesListComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/genres/genresItemComponent/GenresItemComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/genres/genreBadge/GenreBadge.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/genres/genresItemComponent/GenresItemComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/genres/genreBadge/GenreBadge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/genres/genresListComponent/GenresListComponent.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/genres/genresListComponent/GenresListComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/genres/genreBadges/GenreBadges.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/movieContentComponent/MovieContentComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/movieContentComponent/MovieContentComponent.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/movieContentComponent/MovieContentComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/movieContentComponent/MovieContentComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/movie/movieInfoComponent/MovieInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/movie/movieInfoComponent/MovieInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/paginationComponent/PaginationComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/paginationComponent/PaginationComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/genres/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/genres/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/ISliderSettings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/ISliderSettings.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/movie/[id]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movie/[id]/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/movie/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movie/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/api.service.ts" afterDir="false" />
@@ -22,9 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -44,7 +70,7 @@
   }
 }]]></component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -63,7 +89,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lisa/Documents/курс/HTML+CSS",
+    "last_opened_file_path": "C:/Users/Lisa/Documents/курс/next_exam/src/app/genres/[id]",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +101,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\genres\[id]" />
+      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\movie\[id]" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie\genres" />
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie\companies" />
@@ -98,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732046856739</updated>
-      <workItem from="1732046858206" duration="12775000" />
+      <workItem from="1732046858206" duration="28333000" />
     </task>
     <task id="LOCAL-00001" summary="finished movie details page">
       <option name="closed" value="true" />
@@ -116,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732055391467</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update movie details page">
+      <option name="closed" value="true" />
+      <created>1732107663472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732107663472</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished movie details page" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished movie details page" />
+    <MESSAGE value="update movie details page" />
+    <option name="LAST_COMMIT_MESSAGE" value="update movie details page" />
   </component>
 </project>

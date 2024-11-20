@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #fff;
+    width: 190px;
+    transition: .4s;
+}
+
+.form > input {
+    padding: 8px 12px 8px 0;
+    background-color: transparent;
+    color: #fff;
+    width: 95%;
+}
+
+.form:focus-within {
+    width: 310px;
+    transition: .4s;
+}
