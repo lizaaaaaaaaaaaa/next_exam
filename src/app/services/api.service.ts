@@ -55,7 +55,7 @@ const getPopularMovies = async (): Promise<IRegularMovie[]> => {
     return values.results;
 }
 
-const getWantedFilms = async (text: string, page: string):Promise<IRegularMovie[]> => {
+const getWantedFilms = async (text: string, page: string): Promise<IRegularMovie[]> => {
     const response: Response = await fetch(baseUrl + `/search/movie?query=${text}&include_adult=true&language=en-US&page=${page}`, {
         method: "GET",
         headers: {
@@ -68,11 +68,23 @@ const getWantedFilms = async (text: string, page: string):Promise<IRegularMovie[
     return values.results;
 }
 
+const getFilmsByGenre = async (genreId: string, page: string): Promise<IRegularMovie[]> => {
+    const response: Response = await fetch(baseUrl + `/discover/movie?include_adult=true&include_video=true&language=en-US&page=${page ? page : "1"}&sort_by=primary_release_date.desc&with_genres=${genreId}`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${authToken}`,
+            "Content-Type": "application/json",
+        }
+    })
 
+    const values = await response.json();
+    return values.results;
+}
 export {
     getMoviesByPage,
     getSingleMovieById,
     getAllGenres,
     getPopularMovies,
-    getWantedFilms
+    getWantedFilms,
+    getFilmsByGenre
 }

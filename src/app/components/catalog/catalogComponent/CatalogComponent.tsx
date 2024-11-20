@@ -7,7 +7,7 @@ const CatalogComponent: FC = () => {
     return (
         <section className={"container"}>
             <div className={styles.catalog__call}>Movies for every mood — find your movie!</div>
-            <MoviesList/>
+            <MoviesList for={"allFilms"}/>
             <PaginationComponent/>
         </section>
     );
