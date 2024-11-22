@@ -1,0 +1,35 @@
+.wrong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.wrong > div {
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 15px;
+    color: #ca7900;
+}
+
+.wrong > p {
+    font-size: 25px;
+    padding-bottom: 25px;
+    max-width: 420px;
+}
+
+.wrong__link {
+    padding: 12px 16px;
+    font-size: 25px;
+    color: #ca7900;
+    border: 1px solid #ca7900;
+    transition: .4s;
+}
+
+.wrong__link:hover {
+    color: #131313;
+    background-color: #ca7900;
+    transition: .4s;
+}

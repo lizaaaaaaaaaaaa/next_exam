@@ -1,11 +1,12 @@
 'use client';
 
 import React, {FC, useEffect, useState} from 'react';
-import {useRouter, useSearchParams} from "next/navigation";
-import {getFilmsByGenre, getMoviesByPage, getWantedFilms} from "@/app/services/api.service";
-import IRegularMovie from "@/app/models/IRegularMovie";
-import styles from "./MovieList.module.css";
-import MoviesListCard from "@/app/components/catalog/moviesListCard/MoviesListCard";
+import {useRouter, useSearchParams} from 'next/navigation';
+import {getFilmsByGenre, getMoviesByPage, getWantedFilms} from '@/app/services/api.service';
+import IRegularMovie from '@/app/models/IRegularMovie';
+import styles from './MovieList.module.css';
+import MoviesListCard from '@/app/components/catalog/moviesListCard/MoviesListCard';
+import Loader from '@/app/components/UI/loader/Loader';
 
 type PropsType = {
     for: string;
@@ -16,37 +17,44 @@ type PropsType = {
 const MoviesList: FC<PropsType> = (props) => {
     const router = useRouter();
     const params = useSearchParams();
+
     const [movies, setMovies] = useState<IRegularMovie[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    const page: string | null = params.get("page");
-    const searchFilm: string | null = params.get("movie");
+    const page: string | null = params.get('page');
+    const searchFilm: string | null = params.get('movie');
 
-    useEffect(() => {
-        if (!page) {
-            const currentParams = new URLSearchParams(params);
-            currentParams.set("page", "1");
-            router.replace(`?${currentParams.toString()}`, {scroll: false});
-        }
-    }, [page, params, router]);
+    useEffect((): void => {
+        const currentParams = new URLSearchParams(params);
+        currentParams.set('page', '1');
+        router.replace(`?${currentParams.toString()}`, {scroll: false});
+    }, [router, params]);
 
     useEffect((): void => {
         if (page) {
-            if (props.for === "allFilms") {
-                getMoviesByPage(page).then(values => setMovies(values));
-            }
+            setIsLoading(true);
+
             if (searchFilm) {
                 getWantedFilms(searchFilm, page).then((values): void => {
                     setMovies(values.results);
-
+                    setIsLoading(false);
                     if (props.getTotalPagesHandler) {
                         props.getTotalPagesHandler(values.total_pages);
                     }
                 });
-            } else if (props.for === "genresFilms" && props.genre) {
-                getFilmsByGenre(props.genre.toString(), page).then(values => setMovies(values));
+            } else if (props.for === 'allFilms') {
+                getMoviesByPage(page).then((values) => {
+                    setMovies(values);
+                    setIsLoading(false);
+                });
+            } else if (props.for === 'genresFilms' && props.genre) {
+                getFilmsByGenre(props.genre.toString(), page).then((values): void => {
+                    setMovies(values);
+                    setIsLoading(false);
+                });
             }
         }
-    }, [page, props.for, props.genre, searchFilm, props]);
+    }, [page, props, searchFilm]);
 
     const catalogContent: React.JSX.Element[] = movies.map((movie: IRegularMovie) => (
         <MoviesListCard
@@ -58,7 +66,11 @@ const MoviesList: FC<PropsType> = (props) => {
         />
     ));
 
-    return <ul className={styles.catalog__list}>{catalogContent}</ul>
+    if (isLoading) {
+        return <Loader/>;
+    }
+
+    return <ul className={styles.catalog__list}>{catalogContent}</ul>;
 };
 
 export default MoviesList;

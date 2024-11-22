@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eb334b6-5299-40a2-bad7-f91f78634465" name="Changes" comment="update project" />
+    <list default="true" id="6eb334b6-5299-40a2-bad7-f91f78634465" name="Changes" comment="update project">
+      <change afterPath="$PROJECT_DIR$/src/app/[...not_found]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/UI/loader/Loader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/UI/loader/Loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/error/ErrorComponent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/error/ErrorComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wrongPage/WrongPageContent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wrongPage/WrongPageContent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/error/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponentDetails/IntroComponentDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/IProductionCompanies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/IProductionCompanies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/IProductionCountries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/IProductionCountries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/api.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,34 +29,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lizaaaaaaaaaaaa"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lizaaaaaaaaaaaa&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lizaaaaaaaaaaaa/next_exam.git",
-    "accountId": "a2594976-b411-4b2e-8546-595118f0c8d3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lizaaaaaaaaaaaa/next_exam.git&quot;,
+    &quot;accountId&quot;: &quot;a2594976-b411-4b2e-8546-595118f0c8d3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2p5D52tWYTq4Q0s1A8YroKekAjq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,33 +65,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lisa/Documents/курс/next_exam/src/app/genres/[id]",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Lisa\\Documents\\курс\\next_exam\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lisa/Documents/курс/next_exam&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lisa\\Documents\\курс\\next_exam\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\genres\[id]" />
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\movie\[id]" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\services" />
+      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\services\api" />
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie" />
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie\genres" />
       <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie\companies" />
-      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components\movie\movieContentComponent" />
-      <recent name="C:\Users\Lisa\Documents\курс\next_exam\src\app\components" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,7 +110,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732046856739</updated>
-      <workItem from="1732046858206" duration="40972000" />
+      <workItem from="1732046858206" duration="41784000" />
+      <workItem from="1732291535532" duration="2830000" />
+      <workItem from="1732309392733" duration="5783000" />
     </task>
     <task id="LOCAL-00001" summary="finished movie details page">
       <option name="closed" value="true" />
@@ -136,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732276724751</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update project">
+      <option name="closed" value="true" />
+      <created>1732278223950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732278223950</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
