@@ -10,7 +10,7 @@ import MoviesListCard from "@/app/components/catalog/moviesListCard/MoviesListCa
 type PropsType = {
     for: string;
     genre?: string;
-    getTotalPagesHandler: (pages: number) => void;
+    getTotalPagesHandler?: (pages: number) => void;
 };
 
 const MoviesList: FC<PropsType> = (props) => {
@@ -27,7 +27,7 @@ const MoviesList: FC<PropsType> = (props) => {
             currentParams.set("page", "1");
             router.replace(`?${currentParams.toString()}`, {scroll: false});
         }
-    }, [page]);
+    }, [page, params, router]);
 
     useEffect((): void => {
         if (page) {
@@ -37,27 +37,28 @@ const MoviesList: FC<PropsType> = (props) => {
             if (searchFilm) {
                 getWantedFilms(searchFilm, page).then((values): void => {
                     setMovies(values.results);
-                    props.getTotalPagesHandler(values.total_pages);
+
+                    if (props.getTotalPagesHandler) {
+                        props.getTotalPagesHandler(values.total_pages);
+                    }
                 });
             } else if (props.for === "genresFilms" && props.genre) {
                 getFilmsByGenre(props.genre.toString(), page).then(values => setMovies(values));
             }
         }
-    }, [page, props.for, props.genre, searchFilm]);
+    }, [page, props.for, props.genre, searchFilm, props]);
 
-    return (
-        <ul className={styles.catalog__list}>
-            {movies.map((movie: IRegularMovie) => (
-                <MoviesListCard
-                    key={movie.id}
-                    id={movie.id}
-                    title={movie.title}
-                    poster_path={movie.poster_path}
-                    vote_average={movie.vote_average}
-                />
-            ))}
-        </ul>
-    );
+    const catalogContent: React.JSX.Element[] = movies.map((movie: IRegularMovie) => (
+        <MoviesListCard
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            poster_path={movie.poster_path}
+            vote_average={movie.vote_average}
+        />
+    ));
+
+    return <ul className={styles.catalog__list}>{catalogContent}</ul>
 };
 
 export default MoviesList;

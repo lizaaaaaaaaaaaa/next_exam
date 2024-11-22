@@ -3,10 +3,16 @@ import IGenre from "@/app/models/IGenre";
 import IProductionCompanies from "@/app/models/IProductionCompanies";
 import IProductionCountries from "@/app/models/IProductionCountries";
 import GenreBadges from "@/app/components/movie/genres/genreBadges/GenreBadges";
-import StarsRating from "@/app/components/starsRatingComponent/StarsRating";
-import CompaniesListComponent from "@/app/components/movie/companies/companiesListComponent/CompaniesListComponent";
-import CountriesListComponent from "@/app/components/movie/countries/countriesListComponent/CountriesListComponent";
 import styles from "./MovieInfo.module.css";
+import cutDateToNewFormat from "@/app/helpers/cut.date";
+import MovieBudgetComponent from "@/app/components/movie/movieDetails/MovieBudgetComponent";
+import MovieBoxOfficeComponent from "@/app/components/movie/movieDetails/MovieBoxOfficeComponent";
+import MovieCompaniesComponent from "@/app/components/movie/movieDetails/MovieCompaniesComponent";
+import MovieCountriesComponent from "@/app/components/movie/movieDetails/MovieCountriesComponent";
+import MovieTaglineComponent from "@/app/components/movie/movieDetails/MovieTaglineComponent";
+import MovieOriginalTitle from "@/app/components/movie/movieDetails/MovieOriginalTitle";
+import MovieRateComponent from "@/app/components/movie/movieDetails/MovieRateComponent";
+import MoviePlaytimeComponent from "@/app/components/movie/movieDetails/MoviePlaytimeComponent";
 
 type PropsType = {
     title: string,
@@ -21,9 +27,10 @@ type PropsType = {
     vote_count: number,
     vote_average: number,
     status: string,
-    overview: string
-
+    overview: string,
+    release_date: string
 }
+
 const MovieInfo: FC<PropsType> = ({
                                       title,
                                       tagline,
@@ -37,32 +44,23 @@ const MovieInfo: FC<PropsType> = ({
                                       vote_count,
                                       vote_average,
                                       status,
-                                      overview
+                                      overview,
+                                      release_date
                                   }) => {
     return (
         <div className={styles.movie__info}>
             <h1>{title}</h1>
-            <div>
-                <b>Original title:</b>
-                <h2>{original_title}</h2>
-            </div>
-            {tagline ? <div>
-                <b>Tagline:</b>
-                <blockquote>{tagline}</blockquote>
-            </div> : ""}
+            <MovieOriginalTitle original_title={original_title}/>
+            {tagline ? <MovieTaglineComponent tagline={tagline}/> : ""}
             <GenreBadges genres={genres}/>
-            <div className={styles.movie__rate}>
-                <StarsRating rating={vote_average} starDimension={"40px"} starSpacing={"2px"}/>
-                <span>{vote_count}</span>
-            </div>
+            <MovieRateComponent vote_average={vote_average} vote_count={vote_count} className={styles.movie__rate}/>
             <div><b>Status:</b>{status}</div>
-            <div><b>Film budget:</b>{budget > 0 ? `${budget}$` : "unknown"}</div>
-            <div><b>Box Office:</b>{revenue > 0 ? `${revenue}$` : "unknown"}</div>
-            <div><b>Playtime:</b><span>{runtime} minutes</span></div>
-            <div><b>Production companies:</b>{production_companies.length > 0 ?
-                <CompaniesListComponent companies={production_companies}/> : "unknown"}</div>
-            <div><b>Production countries:</b>{production_countries.length > 0 ?
-                <CountriesListComponent countries={production_countries}/> : "unknown"}</div>
+            <div><b>Release date:</b>{cutDateToNewFormat(release_date)}</div>
+            <MovieBudgetComponent budget={budget}/>
+            <MovieBoxOfficeComponent revenue={revenue}/>
+            <MoviePlaytimeComponent runtime={runtime}/>
+            <MovieCompaniesComponent production_companies={production_companies}/>
+            <MovieCountriesComponent production_countries={production_countries}/>
             <p>{overview}</p>
         </div>
     );

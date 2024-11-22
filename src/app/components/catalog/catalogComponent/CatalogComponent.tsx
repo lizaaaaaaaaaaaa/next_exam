@@ -8,6 +8,7 @@ import SearchFormComponent from "@/app/components/catalog/searchFormComponent/Se
 
 const CatalogComponent: FC = () => {
     const [totalPages, setTotalPages] = useState<number>(500);
+
     const getTotalPagesHandler = (pages: number): void => {
         setTotalPages(pages)
     }

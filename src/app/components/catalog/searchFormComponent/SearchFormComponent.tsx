@@ -12,7 +12,9 @@ const SearchFormComponent = () => {
     const searchFormSubmitHandler = (event: FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
 
-        const searchMovie = event.target[0].value;
+        const target = event.target as HTMLFormElement;
+        const input = target.elements[0] as HTMLInputElement;
+        const searchMovie: string = input.value.toLowerCase();
 
         const currentParams = new URLSearchParams(params);
         currentParams.set("page", "1");

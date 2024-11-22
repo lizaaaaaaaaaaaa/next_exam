@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {basePathForImage} from "@/app/constants/api";
 import StarsRating from "@/app/components/starsRatingComponent/StarsRating";
 import styles from "./MoviesListCard.module.css";
 import Link from "next/link";
@@ -16,7 +15,7 @@ const MoviesListCard: FC<PropsType> = ({id, title, vote_average, poster_path}) =
     return (
         <li className={styles.catalog__item}>
             <Link href={`/movie/${id}`}>
-                <PosterPreview title={title} poster_path={poster_path}/>
+                <PosterPreview title={title} poster_path={poster_path} vote_average={vote_average}/>
                 <div className={styles.catalog__name}>{title}</div>
                 <StarsRating rating={vote_average} starDimension={"15px"} starSpacing={"1.5px"}/>
             </Link>

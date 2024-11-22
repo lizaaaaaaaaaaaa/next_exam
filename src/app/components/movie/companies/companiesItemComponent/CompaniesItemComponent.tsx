@@ -1,7 +1,9 @@
 import React, {FC} from 'react';
+
 type PropsType = {
     name: string,
 }
+
 const CompaniesItemComponent: FC<PropsType> = ({name}) => {
     return (
         <li>

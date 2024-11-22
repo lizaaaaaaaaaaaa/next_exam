@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import GenresComponent from "@/app/components/header/genresComponent/GenresComponent";
 import Link from "next/link";
 import styles from "./NavComponent.module.css";
 
-const NavComponent = () => {
+const NavComponent: FC = () => {
     return (
         <nav>
             <ul className={styles.nav__list}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {getSingleMovieById} from "@/app/services/api.service";
 import styles from "./IntroComponent.module.css"
 import IntroComponentDetails from "@/app/components/intro/introComponentDetails/IntroComponentDetails";
@@ -7,7 +7,7 @@ import hero from "../../../assets/images/intro/hero.png"
 import Image from "next/image";
 import IntroPopularComponent from "@/app/components/intro/introPopularComponent/IntroPopularComponent";
 
-const IntroComponent: React.FC = async () => {
+const IntroComponent: FC = async () => {
     const introMovie: IDetailedMovie = await getSingleMovieById("118340");
 
     return (

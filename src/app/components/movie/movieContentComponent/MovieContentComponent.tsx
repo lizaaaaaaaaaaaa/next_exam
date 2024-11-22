@@ -9,11 +9,13 @@ import noImage from "@/app/assets/images/other/noImage.svg";
 const MovieContentComponent: FC<{ id: string }> = async ({id}) => {
     const movie: IDetailedMovie = await getSingleMovieById(id);
     const imageSrc: string = movie.poster_path ? (basePathForImage + movie.poster_path) : noImage.src;
+
     return (
         <section className={styles.movie}>
             <div className={`container ${styles.movie__inner}`}>
                 <img src={imageSrc} alt={movie.title} className={styles.movie__poster}/>
-                <MovieInfo title={movie.title} original_title={movie.original_title} tagline={movie.tagline} genres={movie.genres}
+                <MovieInfo title={movie.title} original_title={movie.original_title} release_date={movie.release_date}
+                           tagline={movie.tagline} genres={movie.genres}
                            production_companies={movie.production_companies}
                            production_countries={movie.production_countries} revenue={movie.revenue}
                            runtime={movie.runtime} vote_count={movie.vote_count} vote_average={movie.vote_average}

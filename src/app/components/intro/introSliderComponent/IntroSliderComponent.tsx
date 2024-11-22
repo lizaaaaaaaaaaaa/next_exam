@@ -20,14 +20,15 @@ const IntroSliderComponent: FC<{ movies: IRegularMovie[] }> = ({movies}) => {
         swipe: false
     };
 
+    const sliderItems: React.JSX.Element[] = movies.map(movie => (
+        <IntroSliderItemComponent key={movie.id} id={movie.id} title={movie.title}
+                                  vote_average={movie.vote_average}
+                                  overview={movie.overview} poster_path={movie.poster_path}/>
+    ));
+
     return (
         <Slider {...settings} className={styles.intro__slider}>
-            {movies.map(movie => (
-                <IntroSliderItemComponent key={movie.id} id={movie.id} title={movie.title}
-                                          vote_average={movie.vote_average}
-                                          overview={movie.overview} poster_path={movie.poster_path}>
-                </IntroSliderItemComponent>
-            ))}
+            {sliderItems}
         </Slider>
     );
 };

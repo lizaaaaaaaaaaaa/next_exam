@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styles from "./IntroComponentDetails.module.css";
 import StarsRating from "@/app/components/starsRatingComponent/StarsRating";
 import Link from "next/link";
@@ -10,7 +10,7 @@ type PropsType = {
     overview: string
 }
 
-const IntroComponentDetails: React.FC<PropsType> = ({id, title, vote_average, overview}) => {
+const IntroComponentDetails: FC<PropsType> = ({id, title, vote_average, overview}) => {
     return (
         <div className={styles.intro__content}>
             <h2>{title}</h2>
