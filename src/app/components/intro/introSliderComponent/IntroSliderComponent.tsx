@@ -11,12 +11,10 @@ const Slider = dynamic(() => import('react-slick'), {ssr: false});
 
 const IntroSliderComponent: FC<{ movies: IRegularMovie[] }> = ({movies}) => {
     const settings: ISliderSettings = {
-        infinite: true,
         arrows: true,
         dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        variableWidth: false,
         swipe: false
     };
 

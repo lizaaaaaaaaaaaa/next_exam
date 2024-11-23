@@ -25,10 +25,12 @@ const MoviesList: FC<PropsType> = (props) => {
     const searchFilm: string | null = params.get('movie');
 
     useEffect((): void => {
-        const currentParams = new URLSearchParams(params);
-        currentParams.set('page', '1');
-        router.replace(`?${currentParams.toString()}`, {scroll: false});
-    }, [router, params]);
+        if (!page) {
+            const currentParams = new URLSearchParams(params);
+            currentParams.set('page', '1');
+            router.replace(`?${currentParams.toString()}`, {scroll: false});
+        }
+    }, [router, params, page]);
 
     useEffect((): void => {
         if (page) {
@@ -37,6 +39,7 @@ const MoviesList: FC<PropsType> = (props) => {
             if (searchFilm) {
                 getWantedFilms(searchFilm, page).then((values): void => {
                     setMovies(values.results);
+                    // console.log(values);
                     setIsLoading(false);
                     if (props.getTotalPagesHandler) {
                         props.getTotalPagesHandler(values.total_pages);
@@ -46,6 +49,7 @@ const MoviesList: FC<PropsType> = (props) => {
                 getMoviesByPage(page).then((values) => {
                     setMovies(values);
                     setIsLoading(false);
+                    // console.log(values);
                 });
             } else if (props.for === 'genresFilms' && props.genre) {
                 getFilmsByGenre(props.genre.toString(), page).then((values): void => {
@@ -63,6 +67,7 @@ const MoviesList: FC<PropsType> = (props) => {
             title={movie.title}
             poster_path={movie.poster_path}
             vote_average={movie.vote_average}
+            adult={movie.adult}
         />
     ));
 

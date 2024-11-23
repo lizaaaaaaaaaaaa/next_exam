@@ -16,9 +16,17 @@
     font-size: 25px;
     font-weight: 500;
     padding: 10px;
-    right: 0;
     top: 0;
     color: #fff;
+}
+
+.image__adult {
+    left: 0;
+    background-color: maroon;
+}
+
+.image__rate {
+    right: 0;
     background-color: #ca7900;
     z-index: 5;
 }
