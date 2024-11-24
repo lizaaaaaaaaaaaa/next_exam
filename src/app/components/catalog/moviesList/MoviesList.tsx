@@ -73,6 +73,10 @@ const MoviesList: FC<PropsType> = (props) => {
         return <Loader/>;
     }
 
+    if (!isLoading && movies.length === 0) {
+        return <p className={styles.catalog__empty}>We cannot find anything!</p>
+    }
+
     return <ul className={styles.catalog__list}>{catalogContent}</ul>;
 };
 
