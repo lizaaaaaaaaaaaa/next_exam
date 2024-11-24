@@ -39,7 +39,6 @@ const MoviesList: FC<PropsType> = (props) => {
             if (searchFilm) {
                 getWantedFilms(searchFilm, page).then((values): void => {
                     setMovies(values.results);
-                    // console.log(values);
                     setIsLoading(false);
                     if (props.getTotalPagesHandler) {
                         props.getTotalPagesHandler(values.total_pages);
@@ -49,7 +48,6 @@ const MoviesList: FC<PropsType> = (props) => {
                 getMoviesByPage(page).then((values) => {
                     setMovies(values);
                     setIsLoading(false);
-                    // console.log(values);
                 });
             } else if (props.for === 'genresFilms' && props.genre) {
                 getFilmsByGenre(props.genre.toString(), page).then((values): void => {

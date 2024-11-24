@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0024beb2-f07d-47fb-b2e2-13f542065602" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0024beb2-f07d-47fb-b2e2-13f542065602" name="Changes" comment="update project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/moviesList/MoviesList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/moviesListCard/MoviesListCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/moviesListCard/MoviesListCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/catalog/posterPreviewComponent/PosterPreview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introComponent/IntroComponent.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introPopularComponent/IntroPopularComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introPopularComponent/IntroPopularComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/intro/introSliderComponent/IntroSliderComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/paginationComponent/PaginationComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/paginationComponent/PaginationComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/api.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,41 +16,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lizaaaaaaaaaaaa"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lizaaaaaaaaaaaa&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lizaaaaaaaaaaaa/next_exam.git",
-    "accountId": "a2594976-b411-4b2e-8546-595118f0c8d3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lizaaaaaaaaaaaa/next_exam.git&quot;,
+    &quot;accountId&quot;: &quot;a2594976-b411-4b2e-8546-595118f0c8d3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2pDzSJuzV4JavXkJO1tx5izGL9f" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lisa/Documents/курс/HTML+CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Lisa\\Documents\\курс\\next_exam\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lisa/Documents/курс/HTML+CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lisa\\Documents\\курс\\next_exam\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,11 +67,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732315432603</updated>
-      <workItem from="1732315433722" duration="4219000" />
+      <workItem from="1732315433722" duration="6952000" />
+      <workItem from="1732471668005" duration="178000" />
     </task>
+    <task id="LOCAL-00001" summary="update project">
+      <option name="closed" value="true" />
+      <created>1732373956232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732373956232</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project" />
   </component>
 </project>
